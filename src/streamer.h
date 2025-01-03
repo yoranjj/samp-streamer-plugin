@@ -111,7 +111,7 @@ protected:
 	{
 		bool extraSatisfyConditons = false;
 
-		if (e.find(-2) && != e.end() && f != 0) {
+		if (e.find(-2) != e.end() && f != 0) {
 			extraSatisfyConditons = true;
 		}
 
