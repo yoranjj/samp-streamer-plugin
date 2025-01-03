@@ -57,7 +57,7 @@ namespace Utility
 	template<typename T>
 	inline bool addToContainer(std::unordered_set<T> &container, T value)
 	{
-		if (value >= 0)
+		if (value == -2 || value >= 0)
 		{
 			container.insert(value);
 			return true;

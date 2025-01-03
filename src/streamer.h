@@ -109,7 +109,13 @@ protected:
 	template<std::size_t N, typename T>
 	inline bool doesPlayerSatisfyConditions(const std::bitset<N> &a, const T &b, const std::unordered_set<T> &c, const T &d, const std::unordered_set<T> &e, const T &f, const std::unordered_set<T> &g, const std::unordered_set<T> &h, bool i)
 	{
-		return (a[b] && (c.empty() || c.find(d) != c.end()) && (e.empty() || e.find(f) != e.end()) && (g.empty() || i ? !Utility::isContainerWithinContainer(g, h) : Utility::isContainerWithinContainer(g, h)));
+		bool extraSatisfyConditons = false;
+
+		if (e.find(-2) && f != 0) {
+			extraSatisfyConditons = true;
+		}
+
+		return (a[b] && (c.empty() || c.find(d) != c.end()) && (extraSatisfyConditons || e.empty() || e.find(f) != e.end()) && (g.empty() || i ? !Utility::isContainerWithinContainer(g, h) : Utility::isContainerWithinContainer(g, h)));
 	}
 };
 
