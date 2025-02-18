@@ -12,21 +12,12 @@ on:
       - '**'
 
 jobs:
-<<<<<<< HEAD
   build-windows-release:
     runs-on: windows-2019
     steps:
     - uses: actions/checkout@v4
       with:
         submodules: recursive
-=======
-  # build-windows-release:
-  #   runs-on: windows-2019
-  #   steps:
-  #   - uses: actions/checkout@v2
-  #     with:
-  #       submodules: recursive
->>>>>>> 767a593 (Update build.yml)
 
   #   - name: Declare github variables
   #     id: vars
@@ -70,7 +61,6 @@ jobs:
   #     with:
   #       format: YYYYMMDD
 
-<<<<<<< HEAD
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
@@ -82,19 +72,6 @@ jobs:
     - uses: actions/checkout@v4
       with:
         submodules: recursive
-=======
-  #   - name: Upload artifacts
-  #     uses: actions/upload-artifact@v3
-  #     with:
-  #       name: streamer-win-release-${{ steps.current-time.outputs.formattedTime }}-${{ steps.vars.outputs.sha_short }}
-  #       path: build/bin/Release
-  # build-windows-debug:
-  #   runs-on: windows-2019
-  #   steps:
-  #   - uses: actions/checkout@v2
-  #     with:
-  #       submodules: recursive
->>>>>>> 767a593 (Update build.yml)
 
   #   - name: Declare github variables
   #     id: vars
@@ -138,33 +115,20 @@ jobs:
   #     with:
   #       format: YYYYMMDD
 
-<<<<<<< HEAD
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
         name: streamer-win-debug-${{ steps.current-time.outputs.formattedTime }}-${{ steps.vars.outputs.sha_short }}
         path: build/bin/Debug
-=======
-  #   - name: Upload artifacts
-  #     uses: actions/upload-artifact@v3
-  #     with:
-  #       name: streamer-win-debug-${{ steps.current-time.outputs.formattedTime }}-${{ steps.vars.outputs.sha_short }}
-  #       path: build/bin/Debug
->>>>>>> 767a593 (Update build.yml)
   build-linux:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         config: [Release]
-        config: [Release]
 
     steps:
-<<<<<<< HEAD
     - uses: actions/checkout@v4
-=======
-    - uses: actions/checkout@v2
->>>>>>> 767a593 (Update build.yml)
       with:
         submodules: recursive
 
